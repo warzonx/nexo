@@ -1,0 +1,31 @@
+# nexo
+
+Teste la qualité d'un générateur de nombres aléatoires (chiffres 0-9)
+avec un test du chi-deux sur les chiffres et sur les paires successives.
+
+## Installation
+
+```r
+# install.packages("remotes")
+remotes::install_github("nexo_prim")
+```
+
+## Exemple
+
+```r
+library(nexo)
+resultat <- nexo_analyse(nexo_aleatoire)
+print(resultat$hz)
+print(resultat$serie)
+
+
+```
+
+## Fonctions
+
+- `nexo_analyse()` : lance l'analyse complète
+- `nexo_hz()` : équiprobabilité des chiffres
+- `nexo_serie()` : équiprobabilité des paires
+-'nexo_aleatoire()':generateur de nexo (generateur biaise)
+## Auteur
+NDZENGUE CEDRIC KILIAN
