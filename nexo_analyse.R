@@ -11,23 +11,40 @@
 #' @export
 
 nexo_analyse <- function(generator){
-if (!is.function(generator)){
-  stop("l'argument generator n'est pas une fonction,essayer ceci:nexo_analyse(runif)")
-}
-#c'est ici que je genere les données de toute mon analyse
+
+  if (!is.function(generator)){
+    stop("L'argument generator doit être une fonction. Exemple : nexo_analyse(runif)")
+  }
+
+  # Génération des données nécessaires à l'ensemble des analyses
   data <- nexo_data(generator)
-  #premier analyse l'equiprobabilité des élèments
-  print("1-voyons si vous passer le test de chi-deux")
+
+  # Premier test : équiprobabilité des éléments
+  print("1 - Vérifions l'équiprobabilité des valeurs avec le test du chi-deux")
+
   result_hz <- nexo_hz(data)
-  #second analyse l'equiprobabilté des paires sucessifs
-  print("2-voyons ensembles si les paire succesif de tes donnée sont equiprobables")
+
+  if (result_hz$couleur == "red"){
+    print("Test 1 échoué : votre générateur présente un écart significatif.")
+  } else {
+    print("Test 1 réussi : aucune anomalie détectée.")
+  }
+
+  # Deuxième test : équiprobabilité des paires successives
+  print("2 - Vérifions l'équiprobabilité des paires successives")
+
   result_serie <- nexo_serie(data)
 
+  # Bilan des analyses
   if (result_hz$couleur == "red" || result_serie$valeur < 0.05){
-    print("votre générateur est biaisé")
+    print("Conclusion : des indices de biais ont été détectés.")
   } else {
-    print("aucune preuve que votre générateur soit biaisé")
+    print("Conclusion : aucune preuve suffisante de biais n'a été détectée.")
   }
-  return(list(hz = result_hz$graphe, serie = result_serie$graphe))
-}
 
+  # Retour des graphiques
+  return(list(
+    hz = result_hz$graphe,
+    serie = result_serie$graphe
+  ))
+}
