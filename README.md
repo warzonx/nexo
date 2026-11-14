@@ -1,6 +1,6 @@
 # nexo
 
-**nexo** est un package R destiné à évaluer la conformité des générateurs pseudo-aléatoires aux propriétés statistiques de la loi uniforme.
+**nexo** est un package R évoutif destiné à évaluer la conformité des générateurs pseudo-aléatoires aux propriétés statistiques de la loi uniforme.
 
 ## Installation
 
