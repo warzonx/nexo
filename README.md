@@ -1,18 +1,18 @@
-# nexo
+# nexos
 
-**nexo** est un package R évoutif destiné à évaluer la conformité des générateurs pseudo-aléatoires aux propriétés statistiques de la loi uniforme.
+**nexo** is an evocative R package designed to assess the compliance of pseudo-random generators with the statistical properties of the uniform distribution.
 
 ## Installation
 
-Pour installer nexo depuis GitHub, exécutez les commandes suivantes dans R :
+To install nexo from GitHub, run the following commands in R:
 
-```r
+'''r
 install.packages("remotes")
 remotes::install_github("warzonx/nexo")
 ```
 
-## Chargement
+## Loading
 
-```r
-library(nexo)
+'''r
+library(link)
 ```
