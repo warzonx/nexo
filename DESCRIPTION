@@ -1,0 +1,23 @@
+Package: nexo
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "KILIAN", "NDZENGUE",
+      email = "ndzenguecedric12@gmail.com",
+      role = c("aut", "cre")
+    )
+  )
+Description:Description: A statistical analysis toolkit for pseudo-random number
+    generators. Provides frequency analysis using the chi-square
+    goodness-of-fit test and serial analysis of successive values.
+License: What license is it under?
+Encoding: UTF-8
+Config/roxygen2/version: 8.1.1
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+NeedsCompilation: no
+Packaged: 2026-11-07 06:27:33 UTC; pc
+Author: KILIAN NDZENGUE [aut, cre]
+Maintainer: KILIAN NDZENGUE <ndzenguecedric12@gmail.com>

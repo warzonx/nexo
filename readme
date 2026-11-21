@@ -1,0 +1,37 @@
+# nexo
+
+**nexo** is an R package designed to evaluate the quality of a random number generator producing digits from 0 to 9.
+
+It uses the chi-square goodness-of-fit test to assess:
+- The uniformity of individual digits.
+- The uniformity of successive digit pairs.
+
+## Installation
+
+```r
+# install.packages("remotes")
+remotes::install_github("warzonx/nexo")
+```
+
+## Example
+
+```r
+library(nexo)
+
+result <- nexo_analyse(nexo_aleatoire)
+
+print(result$hz)
+print(result$serie)
+```
+
+## Functions
+
+- `nexo_analyse()`: Runs the complete analysis.
+- `nexo_hz()`: Tests the uniformity of individual digits.
+- `nexo_serie()`: Tests the uniformity of successive digit pairs.
+- `nexo_aleatoire()`: Generates random digits using the built-in biased generator.
+
+## Author
+
+**NDZENGUE CEDRIC KILIAN**
+
