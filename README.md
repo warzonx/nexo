@@ -1,4 +1,4 @@
-# nexos
+# nexo
 
 **nexo** is an evocative R package designed to assess the compliance of pseudo-random generators with the statistical properties of the uniform distribution.
 
